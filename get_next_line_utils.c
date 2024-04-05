@@ -6,7 +6,7 @@
 /*   By: fatigarc <fatigarc@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 18:10:46 by fatigarc          #+#    #+#             */
-/*   Updated: 2024/04/04 23:05:01 by fatigarc         ###   ########.fr       */
+/*   Updated: 2024/04/05 10:49:23 by fatigarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,6 @@ char    *ft_strjoin(char *s1, char *s2)
 			return (NULL);
 		s1[0] = '\0';
 	}
-	if (!s2)
-		return (NULL);
 	len_s1 = ft_strlen(s1);
 	len_s2 = ft_strlen(s2);
 	ret = (char *)malloc((len_s1 + len_s2 + 1) * sizeof(char));
@@ -84,14 +82,22 @@ char	*move_buffer(char *str)
 	ft_strlcpy(temp, str, ft_strlen(str) + 1);
 	while (temp[i] && temp[i] != NL)
 		temp[i++] = '\0';
+	//printf("recorre antes del fin linea %s\n", temp);
 	if (temp[i] == NL)
 	{
 		i++;
 		j = 0;
+		//printf("buffer entra si es nl %s\n", temp);
 		while (temp[i] != '\0')
+		{
 			temp[j++] = temp[i++];
+			//printf("no deberia al final %s\n", temp);
+		}
+		//printf("salir del while %s\n", temp);
 		temp[j] = '\0';
+		//printf("con el temp[j] %s\n", temp);
 	}
+	//printf("buffer despues de moverse %s\n", temp);
 	free (str);
 	return (temp);
 }

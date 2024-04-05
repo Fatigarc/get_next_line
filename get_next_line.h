@@ -6,7 +6,7 @@
 /*   By: fatigarc <fatigarc@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/16 18:10:41 by fatigarc          #+#    #+#             */
-/*   Updated: 2024/04/04 22:35:13 by fatigarc         ###   ########.fr       */
+/*   Updated: 2024/04/05 09:56:26 by fatigarc         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 # define GET_NEXT_LINE_H
 
 # ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 100
+#  define BUFFER_SIZE 10
 # endif
 
 # ifndef NL
